@@ -1,4 +1,4 @@
-FROM marcoh00/tvheadend:latest
+FROM marcoh00/tvheadend:4
 
 
 RUN curl -o /tmp/sundtek_netinst.sh "http://www.sundtek.de/media/sundtek_netinst.sh" && \
