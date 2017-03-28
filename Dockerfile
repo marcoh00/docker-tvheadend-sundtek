@@ -13,7 +13,7 @@ RUN tar xzvf /tmp/s6-overlay-amd64.tar.gz -C / && rm -rf /tmp/*
 
 # Setup S6
 ENV S6_LOGGING="1"
-RUN mkdir -p /etc/services.d/tvheadend /etc/services.d/mediasrv
+RUN mkdir -p /etc/services.d/mediasrv
 COPY mediasrv /etc/services.d/mediasrv
 
 ENTRYPOINT ["/init", "/entrypoint.sh"]
