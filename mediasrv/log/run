@@ -1,2 +1,2 @@
 #!/usr/bin/execlineb -P
-exec logutil-service /mediasrv-log
+exec logutil-service /log
