@@ -12,7 +12,7 @@ ADD https://github.com/just-containers/s6-overlay/releases/download/v${S6_VERSIO
 RUN tar xzvf /tmp/s6-overlay-amd64.tar.gz -C / && rm -rf /tmp/*
 
 # Setup S6
-RUN mkdir /log && chown -R nobody:nogroup /log
+RUN mkdir /log/mediasrv && chown -R nobody:nogroup /log
 COPY rootfs /
 
 VOLUME /tvh-data /log
