@@ -12,9 +12,8 @@ ADD https://github.com/just-containers/s6-overlay/releases/download/v${S6_VERSIO
 RUN tar xzvf /tmp/s6-overlay-amd64.tar.gz -C / && rm -rf /tmp/*
 
 # Setup S6
-ENV S6_LOGGING="1"
-RUN mkdir -p /etc/services.d/mediasrv /log && chmod 777 /log
-COPY mediasrv /etc/services.d/mediasrv
+RUN mkdir /log && chown -R nobody:nogroup /log
+COPY rootfs /
 
 VOLUME /tvh-data /log
 ENTRYPOINT ["/init", "/entrypoint.sh"]
